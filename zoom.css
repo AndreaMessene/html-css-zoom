@@ -5,24 +5,43 @@
 }
 
 #vh-blocchi{
-    height: 90vh;
+    height: 92vh;
     background-color: black;
 }
 
 #vh-strumenti{
-    height: 10vh;
+    height: 8vh;
     background-color: #222222;
     position: relative;
 }
 
-.angolo-destro{
-    position: absolute;
-    color: aqua;
-    top: 0;
-    right: 0;
+.angolo-superiore{
+    display: flex;
+    justify-content: center;
 }
 
+.angolo-destro{
+    position: absolute;
+    background-color: #4A4A4A;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
+.maximize{
+    top: 6px;
+    right: 15px;
+    padding: 5px 5px 5px 5px;
+}
+
+.speaker-view{
+    top: 6px;
+    right: 56px;
+    width: 121px;
+    padding: 2px 2px 2px 2px;
+    color: white;
+}
 
 .container{
     max-width: 90%;
@@ -30,6 +49,7 @@
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .sub-container{
@@ -37,30 +57,43 @@
     height: 80%;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-around;
-
+    margin-bottom: 40px;
 }
 
 .profilo{
-    width: calc((100% / 7) - 5px);
-    height: calc((100% / 5) - 5px);
-    position: relative;
-    
+    width: calc((100% / 7) - 1%);
+    height: calc(100% / 5);
+    margin-bottom: 1%;
 }
 
 img{
-    height: 100%;
     width: 100%;
-} 
+    display: block;
+}
 
-.involucro{
+.img{
     position: relative;
 }
 
 .nome{
     position: absolute;
-    top: 0;
-    right: 0;
+    display: flex;
+    background-color: #69747D;
+    bottom: 5px;
+    left: 3px;
+    opacity: .9;
+    align-items: center;
+    justify-content: center;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.nome span{
+    color: white;
+    padding: 3px;
+    font-weight: bold;
 }
 
 /********* strumenti ************/
@@ -77,10 +110,6 @@ img{
     padding: 0 5px 0 5px;
 }
 
-.dir-column button{
-    background-color: #222222;
-} 
-
 .interazione{
     display: flex;
     color: white;
@@ -92,14 +121,54 @@ img{
     align-items: center;
 }
 
+.dir-column span{
+    padding-top: 5px;
+}
 
+.dir-column i{
+    transition: 1.25s;
+}
 
-
-
-
+.dir-column i:hover{
+    transform: scale(2);
+    color: chocolate;
+    background-color: white;
+    border-radius: 5px;
+}
 
 i{
     color: white;
-    font-size: 20px;
+    font-size: 13px;
     cursor: pointer;
 }
+
+.fa-angle{
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.fa-angle-up{
+    font-size: 13px;
+    padding: 0 7px 0 7px;
+}
+
+.green i{
+    color: green;
+}
+
+button{
+    height: 100%;
+    padding: 0 10px 0 10px;
+    color: red;
+    font-weight: bold;
+    background-color: #4A4A4A;
+    transition: 0;
+    border: none;
+}
+
+button:active{
+    background-color: #343434;
+}
+
+
